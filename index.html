@@ -1,180 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kieran Oliver Barnett | CX Operations & Team Leadership Portfolio</title>
-    <!-- Tailwind CSS for modern, responsive layouts -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CX operations, team leadership, and practical systems that make complicated work easier to do.">
+  <title>Kieran Oliver Barnett | CX Operations & Leadership</title>
+  <style>
+    :root { --paper:#f3efe5; --ink:#10253a; --rust:#d44b2d; --line:rgba(16,37,58,.22); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .shell { width:min(1180px,calc(100% - 48px)); margin-inline:auto; }
+    .nav { height:92px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .wordmark { font-size:24px; font-weight:900; letter-spacing:-.08em; }
+    .wordmark span,.eyebrow,em { color:var(--rust); }
+    .nav-links { display:flex; gap:30px; align-items:center; font-size:13px; font-weight:700; }
+    .nav-cta { border:1px solid var(--ink); padding:12px 16px; }
+    .hero { min-height:690px; padding:92px 0 76px; display:flex; flex-direction:column; }
+    .eyebrow { margin:0 0 30px; text-transform:uppercase; letter-spacing:.16em; font-size:11px; font-weight:800; }
+    .hero h1 { max-width:1050px; margin:0; font:400 clamp(64px,9.2vw,132px)/.88 Georgia,serif; letter-spacing:-.055em; }
+    em { font-weight:400; }
+    .intro { align-self:flex-end; max-width:510px; margin:auto 0 0; font-size:clamp(20px,2.1vw,28px); line-height:1.38; letter-spacing:-.02em; }
+    .study-wrap { background:var(--ink); color:#f8f3e8; }
+    .study { padding:44px 0 52px; }
+    .section-label { display:flex; justify-content:space-between; padding-bottom:22px; border-bottom:1px solid currentColor; opacity:.76; text-transform:uppercase; letter-spacing:.14em; font-size:10px; font-weight:800; }
+    .study-grid { display:grid; grid-template-columns:1.45fr .65fr; gap:90px; padding:72px 0 80px; }
+    .study h2,.work h2,.footer h2 { margin:0; font:400 clamp(48px,6.3vw,86px)/.98 Georgia,serif; letter-spacing:-.045em; }
+    .study-summary { align-self:end; color:#d5d9dc; font-size:17px; line-height:1.62; }
+    .study-summary p { margin:0 0 20px; }
+    .text-link { display:inline-flex; gap:22px; margin-top:10px; padding-bottom:7px; border-bottom:1px solid #fff; color:#fff; font-size:13px; font-weight:800; }
+    .study-line { margin:0; padding-top:24px; border-top:1px solid rgba(248,243,232,.28); color:#ef7659; font:italic 25px/1.35 Georgia,serif; }
+    .work { padding:112px 0 124px; }
+    .work .section-label { border-color:var(--line); }
+    .work-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:100px; padding-top:68px; }
+    .project-list { border-top:1px solid var(--line); }
+    .project { display:grid; grid-template-columns:42px 1fr auto; gap:22px; align-items:center; padding:25px 0; border-bottom:1px solid var(--line); }
+    .number { color:var(--rust); font-size:10px; font-weight:800; }
+    .project small { display:block; margin-bottom:7px; color:#68727b; text-transform:uppercase; letter-spacing:.12em; font-size:9px; font-weight:800; }
+    .project strong { display:block; font:400 clamp(22px,2.4vw,31px)/1.1 Georgia,serif; }
+    .arrow { display:grid; place-items:center; width:43px; aspect-ratio:1; border:1px solid var(--ink); border-radius:50%; font-size:18px; }
+    .footer-wrap { background:var(--ink); color:#f8f3e8; }
+    .footer { padding:92px 0 28px; }
+    .footer h2 { font-size:clamp(60px,8.6vw,116px); }
+    .footer-mail { display:flex; justify-content:space-between; margin-top:74px; padding:22px 0; border-top:1px solid rgba(248,243,232,.28); border-bottom:1px solid rgba(248,243,232,.28); font:400 clamp(20px,2.8vw,36px) Georgia,serif; }
+    .footer-bottom { display:flex; justify-content:space-between; padding-top:26px; color:#aeb8c0; text-transform:uppercase; letter-spacing:.1em; font-size:10px; }
+    @media (hover:hover) {
+      .nav a,.text-link,.project,.arrow { transition:color .2s ease,transform .2s ease,background .2s ease; }
+      .nav a:hover,.text-link:hover,.project:hover strong { color:var(--rust); }
+      .project:hover .arrow { transform:rotate(45deg); background:var(--rust); color:#fff; border-color:var(--rust); }
+    }
+    @media (max-width:760px) {
+      .shell { width:min(100% - 32px,1180px); }
+      .nav { height:76px; }
+      .nav-links>a:not(.nav-cta) { display:none; }
+      .hero { min-height:590px; padding:62px 0 58px; }
+      .hero h1 { font-size:clamp(58px,18vw,88px); }
+      .intro { align-self:auto; }
+      .study-grid,.work-grid { grid-template-columns:1fr; gap:38px; }
+      .study-grid { padding:52px 0 60px; }
+      .study-line { font-size:21px; }
+      .section-label span:last-child { display:none; }
+      .work { padding:78px 0 84px; }
+      .work-grid { padding-top:44px; }
+      .project { grid-template-columns:30px 1fr auto; gap:12px; }
+      .arrow { width:38px; }
+      .footer { padding-top:76px; }
+      .footer-mail { gap:16px; word-break:break-word; font-size:19px; }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
-
-    <!-- Header / Hero Section -->
-    <header class="max-w-5xl mx-auto px-6 pt-20 pb-12">
-        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-            Kieran Oliver Barnett
-        </h1>
-        <p class="mt-3 text-xl text-indigo-600 font-medium">
-            Operational Excellence & Team Development Leader
-        </p>
-        <p class="mt-4 text-base text-gray-600 max-w-3xl leading-relaxed">
-            I am a hands-on CX leader with a proven record of driving operational excellence and customer satisfaction across individual contributor and leadership roles. I bridge the gap between technical architecture and human-centric service—building custom, AI-powered support tools and streamlining workflows from scratch to eliminate ticket friction and empower front-line teams to do their best work.
-        </p>
-        <div class="mt-6 flex space-x-4">
-            <a href="mailto:kieran.oliver.barnett@gmail.com" class="bg-indigo-600 text-white px-5 py-2.5 rounded-md font-medium hover:bg-indigo-700 transition shadow-sm text-sm">Contact Me</a>
-            <a href="#leadership-focus" class="border border-gray-300 text-gray-700 px-5 py-2.5 rounded-md font-medium hover:bg-gray-100 transition text-sm">View Leadership Focus</a>
-        </div>
+<body>
+  <main>
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="Kieran Oliver Barnett, home">KOB<span>.</span></a>
+      <div class="nav-links">
+        <a href="#study">Case study</a>
+        <a href="#work">Work</a>
+        <a class="nav-cta" href="mailto:kibarnett@proton.me">Say hello <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+    <header id="top" class="hero shell">
+      <p class="eyebrow">CX operations · team leadership</p>
+      <h1>I make complicated work <em>easier to do.</em></h1>
+      <p class="intro">I’m Kieran. I help customer experience teams make work clearer, calmer, and more useful.</p>
     </header>
-
-    <main class="max-w-5xl mx-auto px-6 space-y-20 pb-24">
-
-        <!-- Core Philosophy Intro Box -->
-        <section class="bg-indigo-50 border border-indigo-100 rounded-xl p-6 shadow-sm">
-            <h2 class="text-lg font-bold text-indigo-900 mb-2">Operational Philosophy: Scaling Teams, Not Just Ticket Volume</h2>
-            <p class="text-sm text-indigo-950 leading-relaxed">
-                True automation isn't about replacing the human element; it's about optimizing it. I build tools and workflows from scratch to remove administrative bottlenecks, capture real-time coaching signals, and give agents the exact resources they need to deliver white-glove service.
-            </p>
-        </section>
-
-        <!-- Pillar 1: Team Enablement & AI Support Tools -->
-        <section id="ai-architecture">
-            <h2 class="text-2xl font-bold text-gray-900 border-b pb-2 mb-8">Pillar 1: Team Enablement & AI Support Tools</h2>
-            
-            <div class="grid md:grid-cols-5 gap-8 items-start">
-                <div class="md:col-span-2 bg-gray-900 rounded-lg aspect-video flex items-center justify-center border border-gray-800 shadow-md overflow-hidden relative group">
-                    <div class="text-center p-4">
-                        <span class="text-indigo-400 text-xs font-semibold uppercase tracking-wider block mb-1">Live Team Tool Prototype</span>
-                        <span class="text-gray-400 text-sm font-medium block">Streamlit + Claude API</span>
-                    </div>
-                </div>
-                <div class="md:col-span-3">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-indigo-600">Agent Empowerment</span>
-                    <h3 class="text-xl font-bold text-gray-900 mt-1">Context-Aware Insurance Knowledge Base</h3>
-                   <p class="mt-2 text-gray-600 text-sm leading-relaxed">
-    To demonstrate how to scale support capacity without inflating headcount, I built a customer-facing chatbot prototype designed to handle complex life insurance inquiries. Connecting context from a general knowledge base directly to the Claude API, it delivers highly accurate answers to common questions. To protect the customer experience, the system features built-in safety routing: the moment an inquiry falls outside the documentation scope, it seamlessly guides the user to connect with a live representative.
-
-<b>Note</b>: All information contained in the knowledge base consists entirely of synthetic data compiled from public sources for testing purposes only, and does not contain any proprietary or company-specific information.
-</p>
-<p class="mt-3 text-gray-600 text-sm leading-relaxed font-medium bg-gray-100 p-3 rounded-lg border-l-4 border-indigo-500">
-    💡 <strong>Operational Cross-Over:</strong> While built for customer self-service, this exact architecture can easily be deployed internally to replace traditional, clunky internal knowledge bases—helping front-line agents instantly surface accurate answers in highly complex, documentation-heavy compliance environments.
-</p>
-                    <div class="mt-4 flex space-x-3">
-                        <a href="https://rag-insurance-kb-jgbp2q3m47fuvtzym9kuvk.streamlit.app/" target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800">
-                            Launch Live Prototype App <span class="ml-1">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pillar 2: Automation Ecosystem -->
-        <section id="automation-ecosystem">
-            <h2 class="text-2xl font-bold text-gray-900 border-b pb-2 mb-4">Pillar 2: Examples of Operational Workflows & Feedback Loops</h2>
-            <p class="text-sm text-gray-500 mb-8">The interactive maps below are interactive design samples built on Make.com. They serve as functional examples of how I find resourceful ways to bridge the gap between everyday customer signals and management visibility.</p>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <!-- Card 1: Weekly Insights -->
-                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-0.5 rounded-full">Sample Workflow: Trend Analysis</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mt-3">Customer Trend & Driver Analysis Example</h3>
-                        <p class="mt-2 text-gray-600 text-xs leading-relaxed">
-                            A design sample demonstrating how a manager can systematically pull batches of customer conversations, leverage AI to identify underlying contact drivers or risk patterns, and send an automated summary to Slack. This serves as an example of how to give leadership a proactive view of team friction points without needing expensive analytics platforms.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-100">
-                        <a href="https://us2.make.com/public/shared-scenario/pQCkDMg2Ebx/integration-google-sheets-tools-http" target="_blank" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 inline-flex items-center">
-                            View Make.com Workflow Sample <span class="ml-1">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 2: SOP Draft Generator -->
-                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-green-600 bg-green-50 px-2.5 py-0.5 rounded-full">Sample Workflow: Documentation</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mt-3">Team Knowledge Capture Example</h3>
-                        <p class="mt-2 text-gray-600 text-xs leading-relaxed">
-                            An operational exercise showing how to solve the problem of great team solutions staying trapped as "tribal knowledge." This example setup watches resolved customer interactions, distills the practical troubleshooting steps taken, and drafts a structured template in Notion to help turn everyday problem-solving into scalable team training documentation.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-100">
-                        <a href="https://us2.make.com/public/shared-scenario/6HckB4ReqZy/integration-google-sheets-http-notion" target="_blank" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 inline-flex items-center">
-                            View Make.com Workflow Sample <span class="ml-1">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 3: Trustpilot Alerting -->
-                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-0.5 rounded-full">Sample Workflow: Team Alerts</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mt-3">Review Recovery Alerting Example</h3>
-                        <p class="mt-2 text-gray-600 text-xs leading-relaxed">
-                            A prototype built to show how to eliminate multi-day delays in responding to negative customer feedback. This workflow demonstrates how to automatically capture public feedback or reviews and route them instantly into high-priority team notification channels so managers can step in to support the customer right away.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-100">
-                        <a href="https://us2.make.com/public/shared-scenario/ugglH4XckJ5/integration-google-forms" target="_blank" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 inline-flex items-center">
-                            View Make.com Workflow Sample <span class="ml-1">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 4: CSAT Logging -->
-                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-0.5 rounded-full">Sample Workflow: Performance Tracking</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mt-3">CSAT Negative Feedback Tracker Example</h3>
-                        <p class="mt-2 text-gray-600 text-xs leading-relaxed">
-                            An operational sample shifting customer satisfaction away from vague monthly averages and into daily milestones. This setup demonstrates how to log negative survey scores directly into tracking sheets so team leaders can systematically assign them out for follow-up and performance coaching reviews.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-100 flex flex-wrap gap-x-4 gap-y-2">
-                        <a href="https://us2.make.com/public/shared-scenario/mxNHTJlvwQh/integration-google-forms" target="_blank" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 inline-flex items-center">
-                            View Make.com Sample Map <span class="ml-1">&rarr;</span>
-                        </a>
-                        <a href="https://us2.make.com/public/shared-scenario/TipmcvCpOb3/integration-google-forms-slack" target="_blank" class="text-xs font-medium text-gray-400 hover:text-gray-600 inline-flex items-center">
-                            Early Design Iteration <span class="ml-1">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Core Leadership Focus Section -->
-        <section id="leadership-focus">
-            <h2 class="text-2xl font-bold text-gray-900 border-b pb-2 mb-6">Core Leadership & Operational Focus</h2>
-            
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-lg font-bold text-gray-900">15 Years of Deep Customer Experience & Support Systems Expertise</h3>
-                    <p class="text-sm text-indigo-600 font-medium">Driving Performance, Metrics, & Engagement</p>
-                    <ul class="mt-3 list-disc list-inside text-sm text-gray-600 space-y-2 leading-relaxed">
-                        <li><strong>Performance Coaching & Team Development:</strong> Experienced in leveraging workflow transparency and detailed case tracking to actively mentor agents, clear operational roadblocks, and develop technical confidence across front-line operations.</li>
-                        <li><strong>Data-Driven Metric Management:</strong> Structured systems to track top contact drivers on clear daily and weekly intervals. Experienced in moving support teams beyond reactive ticket handling and into systemic, data-backed customer advocacy.</li>
-                        <li><strong>Problem-Solving & Team Enablement:</strong> Comfortable partnering with engineering teams to align company systems with front-line customer needs. I excel at finding resourceful, everyday ways to fix broken workflows and handle repetitive tasks, shielding my team from administrative headaches so they can focus on delivering great service.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-100 border-t border-gray-200 py-8 text-center text-xs text-gray-500">
-        &copy; 2026 Kieran Oliver Barnett. Built with Tailwind CSS & Hosted via GitHub Pages.
+    <section id="study" class="study-wrap">
+      <article class="study shell">
+        <div class="section-label"><span>Featured leadership study</span><span>Too Many Cooks</span></div>
+        <div class="study-grid">
+          <h2>I thought the problem was personal. <em>It was structural.</em></h2>
+          <div class="study-summary">
+            <p>When leadership roles overlap, ordinary disagreement can turn into competition—and talented people can end up defending territory instead of doing their best work.</p>
+            <p>Drawing on a real management experience, this study shows how clearer decisions, meaningful scope, and accountable influence can help a team work better.</p>
+            <a class="text-link" href="too-many-cooks-case-study.pdf" target="_blank" rel="noreferrer">Read the case study <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <p class="study-line">Authority needs boundaries. Dissent needs safety. Ambition needs pathways. Influence needs responsibility.</p>
+      </article>
+    </section>
+    <section id="work" class="work shell">
+      <div class="section-label"><span>Selected work</span><span>Practical systems for support teams</span></div>
+      <div class="work-grid">
+        <h2>Useful tools.<br><em>Less friction.</em></h2>
+        <div class="project-list">
+          <a class="project" href="https://rag-insurance-kb-jgbp2q3m47fuvtzym9kuvk.streamlit.app/" target="_blank" rel="noreferrer"><span class="number">01</span><span><small>AI knowledge tool</small><strong>Context-aware insurance knowledge base</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="project" href="https://us2.make.com/public/shared-scenario/pQCkDMg2Ebx/integration-google-sheets-tools-http" target="_blank" rel="noreferrer"><span class="number">02</span><span><small>Trend analysis</small><strong>Customer conversation signals</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="project" href="https://us2.make.com/public/shared-scenario/6HckB4ReqZy/integration-google-sheets-http-notion" target="_blank" rel="noreferrer"><span class="number">03</span><span><small>Team learning</small><strong>Knowledge capture workflow</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="project" href="https://us2.make.com/public/shared-scenario/ugglH4XckJ5/integration-google-forms" target="_blank" rel="noreferrer"><span class="number">04</span><span><small>Feedback</small><strong>Review recovery alerts</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-wrap">
+      <div class="footer shell">
+        <p class="eyebrow">15 years in customer experience</p>
+        <h2>Close to the work.<br><em>Clear about the system.</em></h2>
+        <a class="footer-mail" href="mailto:kibarnett@proton.me">kibarnett@proton.me <span aria-hidden="true">↗</span></a>
+        <div class="footer-bottom"><span>© 2026 Kieran Oliver Barnett</span><a href="#top">Back to top ↑</a></div>
+      </div>
     </footer>
-
+  </main>
 </body>
 </html>
