@@ -4,165 +4,296 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="CX operations, team leadership, and practical systems that make complicated work easier to do.">
-  <title>Kieran Oliver Barnett | CX Operations & Leadership</title
-   /* Smaller typography and tighter spacing */
-.hero {
-  min-height: 480px;
-  padding: 64px 0 48px;
-}
-
-.hero h1 {
-  max-width: 850px;
-  font-size: clamp(38px, 5vw, 64px);
-  line-height: 1.08;
-  letter-spacing: -.035em;
-}
-
-.intro {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.study h2,
-.work h2,
-.footer h2 {
-  font-size: clamp(30px, 3.5vw, 46px);
-  line-height: 1.12;
-  letter-spacing: -.025em;
-}
-
-.study-summary {
-  font-size: 16px;
-}
-
-.study-line {
-  font-size: 19px;
-}
-
-.project strong {
-  font-size: 23px;
-  line-height: 1.2;
-}
-
-.footer-mail {
-  font-size: 22px;
-  margin-top: 40px;
-}
-
-.study-grid {
-  gap: 56px;
-  padding: 44px 0;
-}
-
-.work {
-  padding: 64px 0;
-}
-
-.work-grid {
-  gap: 56px;
-  padding-top: 40px;
-}
-
-.footer {
-  padding-top: 60px;
-}
-
-@media (max-width: 760px) {
-  .hero {
-    min-height: auto;
-    padding: 48px 0;
-    gap: 32px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .intro {
-    font-size: 17px;
-  }
-
-  .study h2,
-  .work h2,
-  .footer h2 {
-    font-size: 32px;
-  }
-
-  .study-grid,
-  .work-grid {
-    gap: 28px;
-  }
-
-  .project strong {
-    font-size: 21px;
-  }
-
-  .footer-mail {
-    font-size: 18px;
-  }
-}                                                          
+  <title>Kieran Oliver Barnett | CX Operations &amp; Leadership</title>
   <style>
-    :root { --paper:#f3efe5; --ink:#10253a; --rust:#d44b2d; --line:rgba(16,37,58,.22); }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
-    a { color:inherit; text-decoration:none; }
-    .shell { width:min(1180px,calc(100% - 48px)); margin-inline:auto; }
-    .nav { height:92px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
-    .wordmark { font-size:24px; font-weight:900; letter-spacing:-.08em; }
-    .wordmark span,.eyebrow,em { color:var(--rust); }
-    .nav-links { display:flex; gap:30px; align-items:center; font-size:13px; font-weight:700; }
-    .nav-cta { border:1px solid var(--ink); padding:12px 16px; }
-    .hero { min-height:690px; padding:92px 0 76px; display:flex; flex-direction:column; }
-    .eyebrow { margin:0 0 30px; text-transform:uppercase; letter-spacing:.16em; font-size:11px; font-weight:800; }
-    .hero h1 { max-width:1050px; margin:0; font:400 clamp(64px,9.2vw,132px)/.88 Georgia,serif; letter-spacing:-.055em; }
-    em { font-weight:400; }
-    .intro { align-self:flex-end; max-width:510px; margin:auto 0 0; font-size:clamp(20px,2.1vw,28px); line-height:1.38; letter-spacing:-.02em; }
-    .study-wrap { background:var(--ink); color:#f8f3e8; }
-    .study { padding:44px 0 52px; }
-    .section-label { display:flex; justify-content:space-between; padding-bottom:22px; border-bottom:1px solid currentColor; opacity:.76; text-transform:uppercase; letter-spacing:.14em; font-size:10px; font-weight:800; }
-    .study-grid { display:grid; grid-template-columns:1.45fr .65fr; gap:90px; padding:72px 0 80px; }
-    .study h2,.work h2,.footer h2 { margin:0; font:400 clamp(48px,6.3vw,86px)/.98 Georgia,serif; letter-spacing:-.045em; }
-    .study-summary { align-self:end; color:#d5d9dc; font-size:17px; line-height:1.62; }
-    .study-summary p { margin:0 0 20px; }
-    .text-link { display:inline-flex; gap:22px; margin-top:10px; padding-bottom:7px; border-bottom:1px solid #fff; color:#fff; font-size:13px; font-weight:800; }
-    .study-line { margin:0; padding-top:24px; border-top:1px solid rgba(248,243,232,.28); color:#ef7659; font:italic 25px/1.35 Georgia,serif; }
-    .work { padding:112px 0 124px; }
-    .work .section-label { border-color:var(--line); }
-    .work-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:100px; padding-top:68px; }
-    .project-list { border-top:1px solid var(--line); }
-    .project { display:grid; grid-template-columns:42px 1fr auto; gap:22px; align-items:center; padding:25px 0; border-bottom:1px solid var(--line); }
-    .number { color:var(--rust); font-size:10px; font-weight:800; }
-    .project small { display:block; margin-bottom:7px; color:#68727b; text-transform:uppercase; letter-spacing:.12em; font-size:9px; font-weight:800; }
-    .project strong { display:block; font:400 clamp(22px,2.4vw,31px)/1.1 Georgia,serif; }
-    .arrow { display:grid; place-items:center; width:43px; aspect-ratio:1; border:1px solid var(--ink); border-radius:50%; font-size:18px; }
-    .footer-wrap { background:var(--ink); color:#f8f3e8; }
-    .footer { padding:92px 0 28px; }
-    .footer h2 { font-size:clamp(60px,8.6vw,116px); }
-    .footer-mail { display:flex; justify-content:space-between; margin-top:74px; padding:22px 0; border-top:1px solid rgba(248,243,232,.28); border-bottom:1px solid rgba(248,243,232,.28); font:400 clamp(20px,2.8vw,36px) Georgia,serif; }
-    .footer-bottom { display:flex; justify-content:space-between; padding-top:26px; color:#aeb8c0; text-transform:uppercase; letter-spacing:.1em; font-size:10px; }
-    @media (hover:hover) {
-      .nav a,.text-link,.project,.arrow { transition:color .2s ease,transform .2s ease,background .2s ease; }
-      .nav a:hover,.text-link:hover,.project:hover strong { color:var(--rust); }
-      .project:hover .arrow { transform:rotate(45deg); background:var(--rust); color:#fff; border-color:var(--rust); }
+    :root {
+      --paper: #f3efe5;
+      --ink: #10253a;
+      --rust: #d44b2d;
+      --line: rgba(16,37,58,.22);
     }
-    @media (max-width:760px) {
-      .shell { width:min(100% - 32px,1180px); }
-      .nav { height:76px; }
-      .nav-links>a:not(.nav-cta) { display:none; }
-      .hero { min-height:590px; padding:62px 0 58px; }
-      .hero h1 { font-size:clamp(58px,18vw,88px); }
-      .intro { align-self:auto; }
-      .study-grid,.work-grid { grid-template-columns:1fr; gap:38px; }
-      .study-grid { padding:52px 0 60px; }
-      .study-line { font-size:21px; }
-      .section-label span:last-child { display:none; }
-      .work { padding:78px 0 84px; }
-      .work-grid { padding-top:44px; }
-      .project { grid-template-columns:30px 1fr auto; gap:12px; }
-      .arrow { width:38px; }
-      .footer { padding-top:76px; }
-      .footer-mail { gap:16px; word-break:break-word; font-size:19px; }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.6 Arial, Helvetica, sans-serif;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
+    em { color: var(--rust); font-weight: 400; }
+
+    .shell {
+      width: min(1100px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wordmark {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -.08em;
+    }
+
+    .wordmark span, .eyebrow { color: var(--rust); }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-cta {
+      border: 1px solid currentColor;
+      padding: 10px 14px;
+    }
+
+    .hero { padding: 64px 0; }
+
+    .eyebrow {
+      margin: 0 0 24px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 0;
+      font: 400 clamp(38px, 5vw, 64px)/1.08 Georgia, serif;
+      letter-spacing: -.035em;
+    }
+
+    .intro {
+      max-width: 480px;
+      margin: 40px 0 0 auto;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .study-wrap, .footer-wrap {
+      background: var(--ink);
+      color: #f8f3e8;
+    }
+
+    .study { padding: 36px 0 40px; }
+
+    .section-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid currentColor;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .study .section-label { color: #d5d9dc; }
+
+    .study-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 56px;
+      padding: 40px 0;
+    }
+
+    .study h2, .work h2, .footer h2 {
+      margin: 0;
+      font: 400 clamp(30px, 3.5vw, 44px)/1.13 Georgia, serif;
+      letter-spacing: -.025em;
+    }
+
+    .study-summary {
+      color: #d5d9dc;
+      font-size: 16px;
+    }
+
+    .study-summary p { margin: 0 0 18px; }
+
+    .text-link {
+      display: inline-flex;
+      gap: 18px;
+      margin-top: 8px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid currentColor;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .study-line {
+      margin: 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(248,243,232,.28);
+      color: #ef7659;
+      font: italic 19px/1.5 Georgia, serif;
+    }
+
+    .work { padding: 60px 0; }
+    .work + .work { padding-top: 0; }
+    .work .section-label { border-color: var(--line); }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 56px;
+      padding-top: 36px;
+    }
+
+    .study-grid > *, .work-grid > *, .project > * {
+      min-width: 0;
+    }
+
+    .project-list { border-top: 1px solid var(--line); }
+
+    .project {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr) 38px;
+      gap: 16px;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .number {
+      color: var(--rust);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .project small {
+      display: block;
+      margin-bottom: 8px;
+      color: #56616a;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: 11px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .project strong {
+      display: block;
+      font: 400 23px/1.2 Georgia, serif;
+    }
+
+    .project-description {
+      display: block;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .arrow {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      aspect-ratio: 1;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .footer { padding: 56px 0 28px; }
+
+    .footer-mail {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 36px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(248,243,232,.28);
+      border-bottom: 1px solid rgba(248,243,232,.28);
+      font: 400 22px/1.4 Georgia, serif;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 24px;
+      color: #aeb8c0;
+      font-size: 11px;
+    }
+
+    @media (hover: hover) {
+      .nav a:hover, .project:hover strong {
+        color: var(--rust);
+      }
+
+      .text-link:hover { color: #ef7659; }
+
+      .project:hover .arrow {
+        background: var(--rust);
+        color: #fff;
+        border-color: var(--rust);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: calc(100% - 32px); }
+
+      .nav {
+        padding: 18px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .nav-links { gap: 16px; }
+      .hero { padding: 44px 0; }
+
+      .intro {
+        margin: 28px 0 0;
+        font-size: 17px;
+      }
+
+      .study h2, .work h2, .footer h2 {
+        font-size: 32px;
+      }
+
+      .study-grid, .work-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .study-grid { padding: 30px 0; }
+      .section-label span:last-child { display: none; }
+      .work { padding: 44px 0; }
+      .work-grid { padding-top: 28px; }
+
+      .project {
+        grid-template-columns: 22px minmax(0, 1fr) 34px;
+        gap: 12px;
+      }
+
+      .project strong { font-size: 21px; }
+      .arrow { width: 34px; }
+      .footer { padding-top: 44px; }
+      .footer-mail { font-size: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
@@ -186,15 +317,22 @@
 
     <section id="study" class="study-wrap">
       <article class="study shell">
-        <div class="section-label"><span>Featured leadership study</span><span>Too Many Cooks</span></div>
+        <div class="section-label">
+          <span>Featured leadership study</span>
+          <span>Too Many Cooks</span>
+        </div>
+
         <div class="study-grid">
           <h2>I thought the problem was personal. <em>It was structural.</em></h2>
           <div class="study-summary">
             <p>When leadership roles overlap, ordinary disagreement can turn into competition—and talented people can end up defending territory instead of doing their best work.</p>
             <p>Drawing on a real management experience, this study shows how clearer decisions, meaningful scope, and accountable influence can help a team work better.</p>
-            <a class="text-link" href="too-many-cooks-case-study.pdf" target="_blank" rel="noreferrer">Read the case study <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="too-many-cooks-case-study.pdf" target="_blank" rel="noreferrer">
+              Read the case study <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
+
         <p class="study-line">Authority needs boundaries. Dissent needs safety. Ambition needs pathways. Influence needs responsibility.</p>
       </article>
     </section>
@@ -204,44 +342,79 @@
         <span>Essays on leadership</span>
         <span>People, knowledge, and development</span>
       </div>
+
       <div class="work-grid">
         <h2>Essays on<br><em>leadership.</em></h2>
+
         <div class="project-list">
           <a class="project" href="Make%20a%20Note%20of%20That.pdf" target="_blank" rel="noreferrer">
             <span class="number">01</span>
             <span>
               <small>Knowledge management · Employee development</small>
               <strong>Make a Note of That</strong>
-              <span style="display:block; margin-top:12px; font-size:15px; line-height:1.5;">How Better SOPs Supercharge CX Agent Development</span>
+              <span class="project-description">How Better SOPs Supercharge CX Agent Development</span>
             </span>
             <span class="arrow" aria-hidden="true">↗</span>
-             </a>
-            <a class="project" href="By%20What%20Authority.pdf" target="_blank" rel="noreferrer">
-  <span class="number">02</span>
-  <span>
-    <small>Political philosophy · Leadership</small>
-    <strong>By What Authority?</strong>
-    <span style="display:block; margin-top:12px; font-size:15px; line-height:1.5;">
-      What political philosophy can teach us about authority, legitimacy, and power inside organizations
-    </span>
-  </span>
-  <span class="arrow" aria-hidden="true">↗</span>
-</a>
-         
+          </a>
+
+          <a class="project" href="By%20What%20Authority.pdf" target="_blank" rel="noreferrer">
+            <span class="number">02</span>
+            <span>
+              <small>Political philosophy · Leadership</small>
+              <strong>By What Authority?</strong>
+              <span class="project-description">What political philosophy can teach us about authority, legitimacy, and power inside organizations</span>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
-      
     </section>
 
     <section id="work" class="work shell">
-      <div class="section-label"><span>Selected work</span><span>Practical systems for support teams</span></div>
+      <div class="section-label">
+        <span>Selected work</span>
+        <span>Practical systems for support teams</span>
+      </div>
+
       <div class="work-grid">
         <h2>Useful tools.<br><em>Less friction.</em></h2>
+
         <div class="project-list">
-          <a class="project" href="https://rag-insurance-kb-jgbp2q3m47fuvtzym9kuvk.streamlit.app/" target="_blank" rel="noreferrer"><span class="number">01</span><span><small>AI knowledge tool</small><strong>Context-aware insurance knowledge base</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="project" href="https://us2.make.com/public/shared-scenario/pQCkDMg2Ebx/integration-google-sheets-tools-http" target="_blank" rel="noreferrer"><span class="number">02</span><span><small>Trend analysis</small><strong>Customer conversation signals</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="project" href="https://us2.make.com/public/shared-scenario/6HckB4ReqZy/integration-google-sheets-http-notion" target="_blank" rel="noreferrer"><span class="number">03</span><span><small>Team learning</small><strong>Knowledge capture workflow</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="project" href="https://us2.make.com/public/shared-scenario/ugglH4XckJ5/integration-google-forms" target="_blank" rel="noreferrer"><span class="number">04</span><span><small>Feedback</small><strong>Review recovery alerts</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="project" href="https://rag-insurance-kb-jgbp2q3m47fuvtzym9kuvk.streamlit.app/" target="_blank" rel="noreferrer">
+            <span class="number">01</span>
+            <span>
+              <small>AI knowledge tool</small>
+              <strong>Context-aware insurance knowledge base</strong>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="project" href="https://us2.make.com/public/shared-scenario/pQCkDMg2Ebx/integration-google-sheets-tools-http" target="_blank" rel="noreferrer">
+            <span class="number">02</span>
+            <span>
+              <small>Trend analysis</small>
+              <strong>Customer conversation signals</strong>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="project" href="https://us2.make.com/public/shared-scenario/6HckB4ReqZy/integration-google-sheets-http-notion" target="_blank" rel="noreferrer">
+            <span class="number">03</span>
+            <span>
+              <small>Team learning</small>
+              <strong>Knowledge capture workflow</strong>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="project" href="https://us2.make.com/public/shared-scenario/ugglH4XckJ5/integration-google-forms" target="_blank" rel="noreferrer">
+            <span class="number">04</span>
+            <span>
+              <small>Feedback</small>
+              <strong>Review recovery alerts</strong>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
     </section>
@@ -250,8 +423,15 @@
       <div class="footer shell">
         <p class="eyebrow">15 years in customer experience</p>
         <h2>Close to the work.<br><em>Clear about the system.</em></h2>
-        <a class="footer-mail" href="mailto:kibarnett@proton.me">kibarnett@proton.me <span aria-hidden="true">↗</span></a>
-        <div class="footer-bottom"><span>© 2026 Kieran Oliver Barnett</span><a href="#top">Back to top ↑</a></div>
+
+        <a class="footer-mail" href="mailto:kibarnett@proton.me">
+          kibarnett@proton.me <span aria-hidden="true">↗</span>
+        </a>
+
+        <div class="footer-bottom">
+          <span>© 2026 Kieran Oliver Barnett</span>
+          <a href="#top">Back to top ↑</a>
+        </div>
       </div>
     </footer>
   </main>
